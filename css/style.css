@@ -1,0 +1,117 @@
+body{
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+
+.purplebg{
+    width:100vw;
+    height: 100vh;
+    background-image: url(../image/bg.png);
+    background-size: 4084px 100vh;
+    position: absolute;
+    z-index: -10;
+     animation: bgmoving 10s cubic-bezier(.38,.42,.76,.72) , 
+    bgmoving 10s cubic-bezier(0,0,1,1) 10s , 
+    bgmoving 10s  cubic-bezier(0,0,1,1) infinite 20s; 
+    
+}
+
+@keyframes bgmoving {
+    from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+.foreground{
+    width:100vw;
+    height:100vh;
+    background-image:url(../image/fg.png);
+    background-size:2900px 100vh;
+    z-index: 10;
+    position: absolute;
+    animation: bgmoving 10s cubic-bezier(.38,.42,.76,.72) , 
+    bgmoving 10s cubic-bezier(0,0,1,1) 10s , 
+    bgmoving 10s  cubic-bezier(0,0,1,1) infinite 20s;
+}
+
+
+
+
+
+
+    
+
+
+
+.barbarian{
+    width:1200px;
+    height:800px;
+    overflow: hidden;
+    background-image: url(../image/barbanimation.png);
+    animation: attack 1s steps(4) infinite, 
+    move 10s linear infinite;  
+   position:absolute;
+   margin-bottom:-11vh;
+  
+   
+  
+
+}
+
+@keyframes move {
+    from{
+        right:100%;
+    }
+    to {
+        right:-400px;
+    }
+}
+
+@keyframes attack {
+    0% {
+        background-position: 0 0;
+    }
+    16.66666% {
+        background-position: -4804px 0;
+    }
+    16.66667% {
+        background-position: 0 -800px;
+    }
+    33.33333% {
+        background-position: -4804px -800px;
+    }
+    33.33334% {
+        background-position: 0 -1600px;
+    }
+    50.00000%{
+        background-position:-4804px -1600px;
+    }
+    50.00001%{
+        background-position: 0 -2400px;
+    }
+    66.66666%{
+        background-position: -4804px -2400px;
+    }
+    66.66667%{
+        background-position: 0 -3200px;
+    }
+    82.33333%{
+        background-position: -4804px -3200px;
+    }
+    82.33334%{
+        background-position: 0 -4000px;
+    }
+    98.66666%{
+        background-position: -4804px -4000px;
+    }
+    98.66667%{
+        background-position: 0 -4806px;
+    }
+    100%{
+        background-position: -4804px -4806px;
+    }
+
+    
+  
+
+}
